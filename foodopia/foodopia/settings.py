@@ -75,9 +75,13 @@ WSGI_APPLICATION = "foodopia.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('DJANGO_MYSQL_DATABASE'),
+        'USER': os.getenv('DJANGO_MYSQL_USER'),
+        'PASSWORD': os.getenv('DJANGO_MYSQL_PASSWORD'),
+        'HOST': os.getenv('DJANGO_MYSQL_HOST'),
+        'PORT': os.getenv('DJANGO_MYSQL_PORT', '3306'),
     }
 }
 
