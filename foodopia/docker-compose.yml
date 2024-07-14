@@ -6,8 +6,8 @@ services:
     volumes:
       - ./bin/data/mysql/:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: ''
-      MYSQL_DATABASE: foodopia
+      - MYSQL_ROOT_PASSWORD=!1QAZ2wsx
+      - MYSQL_DATABASE=foodopia
     ports:
       - 3306:3306
     container_name: foodopiaDB
@@ -22,10 +22,12 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_NAME=foodopia
-      - DATABASE_USER=root
-      - DATABASE_PASSWORD=''
-      - DATABASE_HOST=db
-      - DATABASE_PORT=3306
+      - DJANGO_MYSQL_DATABASE=foodopia
+      - DJANGO_MYSQL_USER=root
+      - DJANGO_MYSQL_PASSWORD=!1QAZ2wsx
+      - DJANGO_MYSQL_HOST=db
+      - DJANGO_MYSQL_PORT=3306
+      - DJANGO_REDIS_URL=redis:6379
+      - DJANGO_SETTINGS_MODULE=foodopia.settings
     container_name: foodopia
 

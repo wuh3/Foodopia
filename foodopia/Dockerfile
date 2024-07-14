@@ -2,7 +2,7 @@
 FROM python:3.9-slim
 
 # Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV DJANGO_SETTINGS_MODULE=foodopia.settings
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
