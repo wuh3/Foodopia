@@ -3,6 +3,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
+import appMealplan.models as mp
 import random
 # from djangoblog.utils import get_current_site
 
@@ -19,6 +20,10 @@ class FoodopiaUser(AbstractUser):
     ], blank=False)
     creation_time = models.DateTimeField(_('creation time'), default=now)
     last_modify_time = models.DateTimeField(_('last modify time'), default=now)
+    meal_plan = models.ForeignKey(mp.MealPlan,
+                                  models.SET_NULL,
+                                  blank=True,
+                                  null=True,)
     
     def get_absolute_url(self):
         return reverse(
