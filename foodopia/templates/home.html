@@ -1,8 +1,40 @@
-{% extends 'parent_layouts/base_account.html' %}
-{% load static %}
+{% extends 'base.html' %}
 
 {% block content %}
-  <h1>
-    Welcome to Foodopia!
-  </h1>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Welcome to Foodopia</h2>
+        <p>Delicious meals delivered to your door.</p>
+        <a href="#" class="btn">Get Started</a>
+    </div>
+</section>
+<section class="plans">
+    <h2>Our Plans</h2>
+    <div class="plan-cards">
+        <!-- Example Plan Card -->
+        <div class="plan-card">
+            <h3>Standard Plan</h3>
+            <p>Includes a variety of meals</p>
+            <a href="#" class="btn">View Plan</a>
+        </div>
+        <!-- Add more plan cards as needed -->
+    </div>
+</section>
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Fresh Ingredients</h3>
+            <p>We source the freshest ingredients for your meals.</p>
+        </div>
+        <div class="feature">
+            <h3>Easy to Cook</h3>
+            <p>Our recipes are easy to follow and quick to prepare.</p>
+        </div>
+        <div class="feature">
+            <h3>Flexible Plans</h3>
+            <p>Choose a plan that fits your lifestyle.</p>
+        </div>
+    </div>
+</section>
 {% endblock %}

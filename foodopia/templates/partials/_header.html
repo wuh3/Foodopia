@@ -1,4 +1,12 @@
-{% load static %}
 <header>
-    <img src="{% static 'imgs/logo.png' %}" />
+    <h1>Foodopia</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="#">Plans</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </header>

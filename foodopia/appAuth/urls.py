@@ -25,5 +25,5 @@ urlpatterns = [
     #            re_path(r'^forget_password_code/$',
     #                    views.ForgetPasswordEmailCode.as_view(),
     #                    name='forget_password_code'),
-                path('home/', views.home, name='home'),
+                path('login/', views.home, name='home'),
                ]
